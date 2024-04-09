@@ -1,0 +1,32 @@
+package estudos;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class exemplos {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+//Fazer um programa para ler as medidas da largura e comprimento de um terreno retangular com uma casa decimal, bem como o valor do metro quadrado do terreno com duas casas decimais. Em seguida, o programa deve mostrar o valor da área do terreno, bem como o valor do preço do terreno, ambos com duas casas decimais, conforme o exemplo.
+		// entrada: 10.0 / 30.0 / 200.00 
+		// saida: AREA = 300.00 / PRECO: 60000.00
+		 
+		Scanner sc = new Scanner(System.in); // usei para habilitar a escrita do usuário e leitura da máquina
+		// declaração de variáveis
+		double largura = sc.nextDouble();
+		double comprimento = sc.nextDouble();
+		double metroQuadrado = sc.nextDouble();
+		
+		double area = largura * comprimento;
+		double preco = area * metroQuadrado;
+		// agora vamos mostrar na tela
+		
+		// usei o printf e "%.2f" para ter 2 casas decimais
+		System.out.printf("Area do terreno  = %.2f%n" , area);
+		System.out.printf("Preço do terreno = %.2f%n " , preco);
+		
+		sc.close();
+		
+	}
+
+}
