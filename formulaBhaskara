@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+
+		// Código para calcular o valor de X com bháskara
+          System.out.println("Digite o valor de A: ");
+          double A = sc.nextDouble();
+          System.out.println("Digite o valor de B: ");
+          double B = sc.nextDouble();
+          System.out.println("Digite o valor de C: ");
+          double C = sc.nextDouble();
+		
+		  double delta = Math.pow(B, 2.0)- 4.0 * A * C;
+		  double X1 = (-B + Math.sqrt(delta))/ (2 * A);
+		  double X2 = (-B - Math.sqrt(delta))/ (2 * A);
+		  // uso dos condicionais 
+		  if( A == 0.0) {
+				System.out.println("Impossível calcular");
+			}
+		  else if (delta < 0) {
+				System.out.println("Impossível calcular");
+		  }
+		  else {
+		System.out.printf("R1 é: %.5f%n", X1);
+		System.out.printf("R2 é: %.5f%n", X2);
+		    }
+		  
+
+		  sc.close();
+			
+	}
+
+}
