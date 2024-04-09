@@ -1,0 +1,30 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class exemplo3 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		// Código para leitura de nomes e tirar média das idades
+		
+		System.out.println("Digite um nome: ");
+		String nome1 = sc.next();
+		System.out.println("Ditite a idade: ");
+		int idade1 = sc.nextInt();
+		System.out.println("Ditite outro nome: ");
+		String nome2 = sc.next();
+		System.out.println("Digite a idade: ");
+		int idade2 = sc.nextInt();
+		
+		double idadeMedia = (idade1 + idade2) / 2.0;
+		
+		System.out.printf("A idade média de " + nome1 + " e " + nome2 + " é de %.1f" , idadeMedia );
+	
+		sc.close();
+
+	}
+
+}
